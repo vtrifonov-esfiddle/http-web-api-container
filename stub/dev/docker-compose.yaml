@@ -1,0 +1,15 @@
+version: "3.2"
+services:
+  aspnet-react-production:
+    image: vtrifonovdocker/http-web-api-container:stub-v1.0
+    networks:
+      net:
+    ports: 
+      - 45899:8080
+    volumes:
+      - "../wiremockStubs:/home/wiremock"
+    container_name: http-web-api-container.dev-stub
+networks:
+  net:
+volumes:
+  wiremock-volume:

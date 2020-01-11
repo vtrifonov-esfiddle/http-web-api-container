@@ -1,0 +1,1 @@
+Invoke-WebRequest -Uri "http://localhost:45899/__admin/mappings/reset" -Method POST
