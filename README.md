@@ -32,3 +32,19 @@ navigate to: http://localhost:45899/hello
 .\stub\dev\resetMappings.ps1
 ```
 
+### Record and Playback
+
+1. Start recording by configuring the proxy URI
+
+```
+.\stub\dev\record.ps1 -proxyUri "http://hub.docker.com"
+```
+2. Send requests to the service using WireShark proxy
+
+```
+Invoke-WebRequest "http://localhost:48080/repository/docker/vtrifonovdocker/http-web-api-container"
+```
+3. Results are recorded in folder 
+```
+.\stub\wiremockStubs
+```
